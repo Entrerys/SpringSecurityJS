@@ -1,4 +1,4 @@
-package ru.mishucov.spring.SpringSecurityApp.Model;
+package ru.mishucov.spring.springSecurityApp.model;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -52,7 +52,7 @@ public class User implements Serializable, UserDetails {
         return email;
     }
 
-    @ManyToMany(cascade = CascadeType.MERGE, fetch = FetchType.LAZY)
+    @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(
             name = "users_roles",
             joinColumns = @JoinColumn(name = "user_id"),

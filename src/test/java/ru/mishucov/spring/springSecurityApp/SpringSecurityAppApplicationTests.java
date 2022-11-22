@@ -1,4 +1,4 @@
-package ru.mishucov.spring.SpringSecurityApp;
+package ru.mishucov.spring.springSecurityApp;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

@@ -1,8 +1,8 @@
-package ru.mishucov.spring.SpringSecurityApp.Dao;
+package ru.mishucov.spring.springSecurityApp.dao;
 
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
-import ru.mishucov.spring.SpringSecurityApp.Model.User;
+import ru.mishucov.spring.springSecurityApp.model.User;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;

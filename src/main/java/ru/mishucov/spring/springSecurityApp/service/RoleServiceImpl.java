@@ -1,9 +1,9 @@
-package ru.mishucov.spring.SpringSecurityApp.Service;
+package ru.mishucov.spring.springSecurityApp.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import ru.mishucov.spring.SpringSecurityApp.Dao.RoleDao;
-import ru.mishucov.spring.SpringSecurityApp.Model.Role;
+import ru.mishucov.spring.springSecurityApp.dao.RoleDao;
+import ru.mishucov.spring.springSecurityApp.model.Role;
 
 import java.util.List;
 
@@ -33,8 +33,8 @@ public class RoleServiceImpl implements RoleService {
     }
 
     @Override
-    public List<Role> listByRole(List<String> name) {
-        return roleDao.listByName(name);
+    public List<Role> getListByRole(List<String> name) {
+        return roleDao.getListByName(name);
     }
 
 }

@@ -1,4 +1,4 @@
-package ru.mishucov.spring.SpringSecurityApp.configs;
+package ru.mishucov.spring.springSecurityApp.configs;
 
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.authority.AuthorityUtils;

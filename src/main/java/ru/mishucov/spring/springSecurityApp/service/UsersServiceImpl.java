@@ -1,4 +1,4 @@
-package ru.mishucov.spring.SpringSecurityApp.Service;
+package ru.mishucov.spring.springSecurityApp.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
@@ -8,9 +8,9 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
-import ru.mishucov.spring.SpringSecurityApp.Dao.UsersDao;
-import ru.mishucov.spring.SpringSecurityApp.Model.Role;
-import ru.mishucov.spring.SpringSecurityApp.Model.User;
+import ru.mishucov.spring.springSecurityApp.dao.UsersDao;
+import ru.mishucov.spring.springSecurityApp.model.Role;
+import ru.mishucov.spring.springSecurityApp.model.User;
 
 import javax.transaction.Transactional;
 import java.util.Collection;

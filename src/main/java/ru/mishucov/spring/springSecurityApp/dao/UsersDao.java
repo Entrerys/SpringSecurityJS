@@ -1,7 +1,7 @@
-package ru.mishucov.spring.SpringSecurityApp.Dao;
+package ru.mishucov.spring.springSecurityApp.dao;
 
 
-import ru.mishucov.spring.SpringSecurityApp.Model.User;
+import ru.mishucov.spring.springSecurityApp.model.User;
 
 import java.util.List;
 

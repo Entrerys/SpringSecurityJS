@@ -1,4 +1,4 @@
-package ru.mishucov.spring.SpringSecurityApp.Model;
+package ru.mishucov.spring.springSecurityApp.model;
 
 import org.springframework.security.core.GrantedAuthority;
 
@@ -11,10 +11,7 @@ import java.util.Objects;
 @Table(name = "roles")
 public class Role implements GrantedAuthority, Serializable {
 
-    @ManyToMany
-    @JoinTable(name = "users_roles",
-            joinColumns = @JoinColumn(name = "role_id"),
-            inverseJoinColumns = @JoinColumn(name = "user_id"))
+    @ManyToMany(mappedBy = "roles")
     private List<User> users;
 
     @Id

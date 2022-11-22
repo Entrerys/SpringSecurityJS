@@ -1,12 +1,12 @@
-package ru.mishucov.spring.SpringSecurityApp.controller;
+package ru.mishucov.spring.springSecurityApp.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import ru.mishucov.spring.SpringSecurityApp.Model.User;
-import ru.mishucov.spring.SpringSecurityApp.Service.RoleService;
-import ru.mishucov.spring.SpringSecurityApp.Service.UsersService;
+import ru.mishucov.spring.springSecurityApp.model.User;
+import ru.mishucov.spring.springSecurityApp.service.RoleService;
+import ru.mishucov.spring.springSecurityApp.service.UsersService;
 
 import java.security.Principal;
 import java.util.List;
@@ -37,7 +37,7 @@ public class AdminController {
 
     @PostMapping("/new")
     public String create(@ModelAttribute("usernew") User user, @RequestParam(value = "role", required = false) List<String> roles) {
-        user.setRoles(roleService.listByRole(roles));
+        user.setRoles(roleService.getListByRole(roles));
         usersService.saveUser(user);
         return "redirect:/admin";
     }
@@ -67,7 +67,7 @@ public class AdminController {
     public String editUser(@ModelAttribute("user") User user, @RequestParam(value = "role", required = false) List<String> roles) {
 
         user.setRoles(roleService.getRoles());
-        user.setRoles(roleService.listByRole(roles));
+        user.setRoles(roleService.getListByRole(roles));
         usersService.update(user);
         return "redirect:/admin";
     }

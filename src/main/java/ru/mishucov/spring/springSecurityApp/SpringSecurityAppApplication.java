@@ -1,4 +1,4 @@
-package ru.mishucov.spring.SpringSecurityApp;
+package ru.mishucov.spring.springSecurityApp;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

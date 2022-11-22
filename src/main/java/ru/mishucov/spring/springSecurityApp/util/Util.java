@@ -1,11 +1,11 @@
-package ru.mishucov.spring.SpringSecurityApp.util;
+package ru.mishucov.spring.springSecurityApp.util;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import ru.mishucov.spring.SpringSecurityApp.Model.Role;
-import ru.mishucov.spring.SpringSecurityApp.Model.User;
-import ru.mishucov.spring.SpringSecurityApp.Service.RoleService;
-import ru.mishucov.spring.SpringSecurityApp.Service.UsersService;
+import ru.mishucov.spring.springSecurityApp.model.Role;
+import ru.mishucov.spring.springSecurityApp.model.User;
+import ru.mishucov.spring.springSecurityApp.service.RoleService;
+import ru.mishucov.spring.springSecurityApp.service.UsersService;
 
 
 import javax.annotation.PostConstruct;

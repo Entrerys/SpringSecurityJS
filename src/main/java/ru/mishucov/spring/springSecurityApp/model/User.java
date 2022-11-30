@@ -1,9 +1,12 @@
 package ru.mishucov.spring.springSecurityApp.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import javax.persistence.*;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.Size;
 import java.io.Serializable;
 import java.util.Collection;
 import java.util.List;
@@ -27,12 +30,14 @@ public class User implements Serializable, UserDetails {
     @Column(name = "firstname")
     private String firstname;
 
+
     @Column(name = "lastname")
     private String lastname;
 
     @Column(name = "age")
     private int age;
 
+    @Email
     @Column(name = "email")
     private String email;
 
@@ -51,7 +56,7 @@ public class User implements Serializable, UserDetails {
     public String getEmail() {
         return email;
     }
-
+    @JsonIgnore
     @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(
             name = "users_roles",

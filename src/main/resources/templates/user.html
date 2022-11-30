@@ -20,8 +20,7 @@
 <body>
 
 <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
-    <a class="navbar-brand col-md-3 col-lg-2 mr-0 px-3"
-       th:text="|${user.getEmail()} with roles: ${user.getRoles()}|"></a>
+    <a class="navbar-brand col-md-3 col-lg-2 mr-0 px-3" id ="userInfo"></a></a>
 
     <ul class="navbar-nav px-3">
         <li class="nav-item text-nowrap">
@@ -46,7 +45,7 @@
                         </div>
                     </li>
                     <li class="list-group-item active">
-                        <a class="navbar-brand white text-right" href="/user">User</a></li>
+                        <a class="navbar-brand white text-right" id="userid" href="/user">User</a></li>
                 </ul>
             </div>
 
@@ -71,13 +70,14 @@
                                 <th>Roles</th>
                             </tr>
                             </thead>
-                            <tbody>
-                            <td th:text="${user.id}"></td>
-                            <td th:text="${user.getFirstname()}"></td>
-                            <td th:text="${user.getLastname()}"></td>
-                            <td th:text="${user.getAge()}"></td>
-                            <td th:text="${user.email}"></td>
-                            <td th:text="${user.getRoles()}"></td>
+                            <tbody id = "userInfoMain">
+
+<!--                            <td th:text="${user.id}"></td>-->
+<!--                            <td th:text="${user.getFirstname()}"></td>-->
+<!--                            <td th:text="${user.getLastname()}"></td>-->
+<!--                            <td th:text="${user.getAge()}"></td>-->
+<!--                            <td th:text="${user.email}"></td>-->
+<!--                            <td th:text="${user.getRoles()}"></td>-->
                             </tbody>
                         </table>
                     </div>
@@ -89,6 +89,7 @@
     </div>
 </div>
 
+<script type="text/javascript" src="/user.js"></script>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

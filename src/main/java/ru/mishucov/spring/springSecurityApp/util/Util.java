@@ -1,6 +1,8 @@
 package ru.mishucov.spring.springSecurityApp.util;
 
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 import ru.mishucov.spring.springSecurityApp.model.Role;
 import ru.mishucov.spring.springSecurityApp.model.User;
@@ -41,6 +43,10 @@ public class Util {
         usersService.saveUser(user);
         usersService.saveUser(admin);
 
+    }
+    @Bean
+    public ModelMapper modelMapper(){
+        return new ModelMapper();
     }
 
 }

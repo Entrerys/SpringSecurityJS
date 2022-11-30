@@ -8,7 +8,6 @@ import ru.mishucov.spring.springSecurityApp.model.User;
 import ru.mishucov.spring.springSecurityApp.service.RoleService;
 import ru.mishucov.spring.springSecurityApp.service.UsersService;
 
-import java.security.Principal;
 import java.util.List;
 
 @Controller
@@ -25,15 +24,9 @@ public class AdminController {
     }
 
     @GetMapping()
-    public String getAllUsers(Model model, Principal principal) {
-        User user = usersService.getUserByUsername(principal.getName());
-        model.addAttribute("user", user);
-        model.addAttribute("usernew", new User());
-        model.addAttribute("users", usersService.getAllUsers());
-        model.addAttribute("rolelist", roleService.getRoles());
+    public String index() {
         return "admin";
     }
-
 
     @PostMapping("/new")
     public String create(@ModelAttribute("usernew") User user, @RequestParam(value = "role", required = false) List<String> roles) {
@@ -65,7 +58,6 @@ public class AdminController {
 
     @PatchMapping("/{id}/edit")
     public String editUser(@ModelAttribute("user") User user, @RequestParam(value = "role", required = false) List<String> roles) {
-
         user.setRoles(roleService.getRoles());
         user.setRoles(roleService.getListByRole(roles));
         usersService.update(user);

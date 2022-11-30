@@ -29,7 +29,7 @@ function editUser() {
     }
 
     fetch('http://localhost:8080/api/admin/edit/', {
-        method: "PUT",
+        method: "PATCH",
         headers: {
             'Content-Type': 'application/json;charset=UTF-8'
         },

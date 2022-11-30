@@ -47,7 +47,7 @@ public class MyRestController {
         return new ResponseEntity<>(all, HttpStatus.OK);
     }
 
-    @PutMapping("/admin/edit")
+    @PatchMapping("/admin/edit")
     public ResponseEntity<Void> editUser(@RequestBody UserDTO userDTO) {
         User user = convertToUser(userDTO);
         user.setId(userDTO.getId());

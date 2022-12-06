@@ -69,18 +69,6 @@ public class UsersServiceImpl implements UsersService, UserDetailsService {
     }
 
 
-//    @Override
-//    @Transactional
-//    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-//        User user = usersdao.getUserByUsername(username);
-//        if (user == null) {
-//            throw new UsernameNotFoundException("User not found");
-//        }
-//        return new org.springframework.security.core.userdetails.User(user.getUsername(), user.getPassword(),
-//                mapRolesToAuthorities(user.getRoles()));
-//
-//    }
-
     private Collection<? extends GrantedAuthority> mapRolesToAuthorities(Collection<Role> roles) {
         return roles.stream().map(r -> new SimpleGrantedAuthority(r.getName())).collect(Collectors.toList());
     }
